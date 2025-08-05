@@ -1673,6 +1673,16 @@ const operacoes = [
         id: 1042,
         nome: "PRODUTO NÃO CONFORME - SEMPA",
         objetosCusto: [261]
+    },
+    {
+        id: 1623,
+        nome: "SULCAMENTO SEM ADUBO",
+        objetosCusto: [31,46]
+    },
+    {
+        id: 1625,
+        nome: "LIMPEZA COM PIPA",
+        objetosCusto: [928,349,927,746,156,611]
     }
 ];
 
