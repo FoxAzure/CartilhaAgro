@@ -205,9 +205,9 @@ const operacoes = [
         objetosCusto: [745, 161, 748, 156, 746, 754, 750, 160, 157]
     },
     {
-    id: 47,
-    nome: "TOMBANDO CANA MECANIZ",
-    objetosCusto: [156, 693, 694, 746, 754, 757]
+        id: 47,
+        nome: "TOMBANDO CANA MECANIZ",
+        objetosCusto: [156, 693, 694, 746, 754, 757]
     },
     {
         id: 48,
@@ -305,9 +305,9 @@ const operacoes = [
         objetosCusto: [133, 142]
     },
     {
-    id: 97,
-    nome: "COSERV  DE CANAIS DRENOS",
-    objetosCusto: [152]
+        id: 97,
+        nome: "COSERV  DE CANAIS DRENOS",
+        objetosCusto: [152]
     },
     {
         id: 114,
@@ -350,9 +350,9 @@ const operacoes = [
         objetosCusto: [35, 50, 62, 109, 202]
     },
     {
-    id: 144,
-    nome: "TRANSP  CANA SEMENTE",
-    objetosCusto: [36, 51, 64, 111]
+        id: 144,
+        nome: "TRANSP  CANA SEMENTE",
+        objetosCusto: [36, 51, 64, 111]
     },
     {
         id: 145,
@@ -400,9 +400,9 @@ const operacoes = [
         objetosCusto: [155, 158, 202, 753, 758]
     },
     {
-    id: 169,
-    nome: "APLIC. AEREA  MATURADOR",
-    objetosCusto: [79, 98]
+        id: 169,
+        nome: "APLIC. AEREA  MATURADOR",
+        objetosCusto: [79, 98]
     },
     {
         id: 170,
@@ -480,9 +480,9 @@ const operacoes = [
         objetosCusto: [632, 633, 659, 660, 698, 699, 1031, 1645, 1721]
     },
     {
-    id: 196,
-    nome: "TRANSP  MUDAS PLAN  NAT",
-    objetosCusto: [611]
+        id: 196,
+        nome: "TRANSP  MUDAS PLAN  NAT",
+        objetosCusto: [611]
     },
     {
         id: 198,
@@ -600,9 +600,9 @@ const operacoes = [
         objetosCusto: [40, 55, 67, 114]
     },
     {
-    id: 234,
-    nome: "TRANSP  MANILHAS E OUTROS",
-    objetosCusto: [86, 105, 132, 224, 225, 228, 312, 760, 927]
+        id: 234,
+        nome: "TRANSP  MANILHAS E OUTROS",
+        objetosCusto: [86, 105, 132, 224, 225, 228, 312, 760, 927]
     },
     {
         id: 235,
@@ -715,9 +715,9 @@ const operacoes = [
         objetosCusto: [79, 98]
     },
     {
-    id: 278,
-    nome: "ALEIRAMENTO DE PALHA",
-    objetosCusto: [814]
+        id: 278,
+        nome: "ALEIRAMENTO DE PALHA",
+        objetosCusto: [814]
     },
     {
         id: 279,
@@ -1185,9 +1185,9 @@ const operacoes = [
         objetosCusto: [18, 71, 75, 90, 94, 698, 699, 927]
     },
     {
-    id: 461,
-    nome: "LAVAGEM DO TANQUE HERBICIDA",
-    objetosCusto: [90]
+        id: 461,
+        nome: "LAVAGEM DO TANQUE HERBICIDA",
+        objetosCusto: [90]
     },
     {
         id: 462,
@@ -1285,9 +1285,9 @@ const operacoes = [
         objetosCusto: [702, 703]
     },
     {
-    id: 481,
-    nome: "POS EMERG HERBIC AEREA 30L/HA - AVIAO",
-    objetosCusto: [1635, 1636]
+        id: 481,
+        nome: "POS EMERG HERBIC AEREA 30L/HA - AVIAO",
+        objetosCusto: [1635, 1636]
     },
     {
         id: 482,
@@ -1442,7 +1442,7 @@ const operacoes = [
     {
         id: 541,
         nome: "DISTRIBUIÇÃO DE CANA - SEMENTE",
-        objetosCusto: [2395]
+        objetosCusto: [2395,2465]
     },
     {
         id: 542,
@@ -1683,6 +1683,11 @@ const operacoes = [
         id: 1625,
         nome: "LIMPEZA COM PIPA",
         objetosCusto: [928,349,927,746,156,611]
+    },
+    {
+        id: 1625,
+        nome: "SULC  ADUB FUND  MECAN CULTIVO MINIMO",
+        objetosCusto: [2539]
     }
 ];
 
@@ -2017,10 +2022,9 @@ function filtrarOperacoes() {
 
     const termo = searchInput.value.toLowerCase();
 
-    const filtradas = operacoes.filter(op =>
-        op.nome.toLowerCase().includes(termo) ||
-        op.id.toString() === (termo)
-    );
+    const filtradas = operacoes
+  .filter(op => op.nome.toLowerCase().includes(termo) || op.id.toString() === termo)
+  .sort((a, b) => a.nome.localeCompare(b.nome));
 
     renderizarTabela(filtradas);
     limparSelecao();
