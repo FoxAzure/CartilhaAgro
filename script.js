@@ -1693,7 +1693,12 @@ const operacoes = [
         id: 1025,
         nome: "SULC   CULTIVO MINIMO",
         objetosCusto: [2539]
-    }
+    },
+    {
+        id: 619,
+        nome: "TRANSPORTE DE VINHAÇA",
+        objetosCusto: [660]
+    },
 ];
 
 
