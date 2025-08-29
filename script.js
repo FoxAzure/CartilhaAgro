@@ -1688,6 +1688,11 @@ const operacoes = [
         id: 1605,
         nome: "SULC  ADUB FUND  MECAN CULTIVO MINIMO",
         objetosCusto: [2539]
+    },
+    {
+        id: 1025,
+        nome: "SULC   CULTIVO MINIMO",
+        objetosCusto: [2539]
     }
 ];
 
